@@ -1,0 +1,614 @@
+@prefix : <#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix vdo: <http://www.acemedia.org/ontologies/VDO#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix lire: <http://www.example.org/lire#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mpeg7: <http://metadata.net/mpeg7/mpeg7.owl#> .
+@prefix ma-ont: <https://www.w3.org/ns/ma-ont.rdf#> .
+@base <http://www.example.org/lire> .
+
+<http://www.example.org/lire> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.example.org/lire#autoColorCorrelogram
+lire:autoColorCorrelogram rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf lire:globalFeature ;
+                          rdfs:range lire:AutoColorCorrelogram .
+
+
+###  http://www.example.org/lire#binCountsEdgeHistogram
+lire:binCountsEdgeHistogram rdf:type owl:ObjectProperty ;
+                            rdfs:domain lire:EdgeHistogram ;
+                            rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#binaryPatternsPyramid
+lire:binaryPatternsPyramid rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf lire:globalFeature ;
+                           rdfs:range lire:BinaryPatternsPyramid .
+
+
+###  http://www.example.org/lire#cEDD
+lire:cEDD rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf lire:globalFeature ;
+          rdfs:range lire:CEDD .
+
+
+###  http://www.example.org/lire#cX
+lire:cX rdf:type owl:ObjectProperty ;
+        rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#cY
+lire:cY rdf:type owl:ObjectProperty ;
+        rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#colorLayout
+lire:colorLayout rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf lire:globalFeature ;
+                 rdfs:range lire:ColorLayout .
+
+
+###  http://www.example.org/lire#edgeHistogram
+lire:edgeHistogram rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf lire:globalFeature ;
+                   rdfs:range lire:EdgeHistogram .
+
+
+###  http://www.example.org/lire#fCTH
+lire:fCTH rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf lire:globalFeature ;
+          rdfs:range lire:FCTH .
+
+
+###  http://www.example.org/lire#feature
+lire:feature rdf:type owl:ObjectProperty ;
+             rdfs:domain ma-ont:MediaResource .
+
+
+###  http://www.example.org/lire#fuzzyColorHistogram
+lire:fuzzyColorHistogram rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf lire:globalFeature ;
+                         rdfs:range lire:FuzzyColorHistogram .
+
+
+###  http://www.example.org/lire#fuzzyOpponentHistogram
+lire:fuzzyOpponentHistogram rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf lire:globalFeature ;
+                            rdfs:range lire:FuzzyOpponentHistogram .
+
+
+###  http://www.example.org/lire#gabor
+lire:gabor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf lire:globalFeature ;
+           rdfs:range lire:Gabor .
+
+
+###  http://www.example.org/lire#globalFeature
+lire:globalFeature rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf lire:feature ;
+                   rdfs:range lire:Feature .
+
+
+###  http://www.example.org/lire#hasRelatedMediaResource
+lire:hasRelatedMediaResource rdf:type owl:ObjectProperty ;
+                             rdfs:domain ma-ont:MediaResource ;
+                             rdfs:range lire:RelatedMediaResource .
+
+
+###  http://www.example.org/lire#isSubImageOf
+lire:isSubImageOf rdf:type owl:ObjectProperty ;
+                  owl:inverseOf lire:subImage .
+
+
+###  http://www.example.org/lire#jCD
+lire:jCD rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf lire:globalFeature ;
+         rdfs:range lire:JCD .
+
+
+###  http://www.example.org/lire#jpegCoefficientHistogram
+lire:jpegCoefficientHistogram rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf lire:globalFeature ;
+                              rdfs:range lire:JpegCoefficientHistogram .
+
+
+###  http://www.example.org/lire#localBinaryPatterns
+lire:localBinaryPatterns rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf lire:globalFeature ;
+                         rdfs:range lire:LocalBinaryPatterns .
+
+
+###  http://www.example.org/lire#localFeature
+lire:localFeature rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf lire:feature ;
+                  rdfs:range lire:Feature .
+
+
+###  http://www.example.org/lire#luminanceLayout
+lire:luminanceLayout rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf lire:globalFeature ;
+                     rdfs:range lire:LuminanceLayout .
+
+
+###  http://www.example.org/lire#numberOfBitplanesDiscarded
+lire:numberOfBitplanesDiscarded rdf:type owl:ObjectProperty ;
+                                rdfs:domain lire:ScalableColor ;
+                                rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#numberOfCCoeff
+lire:numberOfCCoeff rdf:type owl:ObjectProperty ;
+                    rdfs:domain lire:ColorLayout ;
+                    rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#numberOfCoefficients
+lire:numberOfCoefficients rdf:type owl:ObjectProperty ;
+                          rdfs:domain lire:ScalableColor ;
+                          rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#numberOfYCoeff
+lire:numberOfYCoeff rdf:type owl:ObjectProperty ;
+                    rdfs:domain lire:ColorLayout ;
+                    rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#opponentHistogram
+lire:opponentHistogram rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf lire:globalFeature ;
+                       rdfs:range lire:OpponentHistogram .
+
+
+###  http://www.example.org/lire#pHOG
+lire:pHOG rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf lire:globalFeature ;
+          rdfs:range lire:PHOG .
+
+
+###  http://www.example.org/lire#relatedMediaResource
+lire:relatedMediaResource rdf:type owl:ObjectProperty ;
+                          rdfs:domain ma-ont:RelatedMediaResource ;
+                          rdfs:range lire:MediaResource .
+
+
+###  http://www.example.org/lire#rotationInvariantLocalBinaryPatterns
+lire:rotationInvariantLocalBinaryPatterns rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf lire:globalFeature ;
+                                          rdfs:range lire:RotationInvariantLocalBinaryPatterns .
+
+
+###  http://www.example.org/lire#scalableColor
+lire:scalableColor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf lire:globalFeature ;
+                   rdfs:range lire:ScalableColor .
+
+
+###  http://www.example.org/lire#selfSimilaritiesExtractor
+lire:selfSimilaritiesExtractor rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf lire:localFeature ;
+                               rdfs:range lire:SelfSimilaritiesExtractor .
+
+
+###  http://www.example.org/lire#selfSimilaritiesOrigExtractor
+lire:selfSimilaritiesOrigExtractor rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf lire:localFeature ;
+                                   rdfs:range lire:SelfSimilaritiesOrigExtractor .
+
+
+###  http://www.example.org/lire#shapeContext
+lire:shapeContext rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf lire:localFeature ;
+                  rdfs:range lire:ShapeContext .
+
+
+###  http://www.example.org/lire#shapemeHistogram
+lire:shapemeHistogram rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf lire:localFeature ;
+                      rdfs:range lire:ShapemeHistogram .
+
+
+###  http://www.example.org/lire#siftExtractor
+lire:siftExtractor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf lire:localFeature ;
+                   rdfs:range lire:SiftExtractor .
+
+
+###  http://www.example.org/lire#simpleColorHistogram
+lire:simpleColorHistogram rdf:type owl:ObjectProperty ;
+                          rdfs:subPropertyOf lire:globalFeature ;
+                          rdfs:range lire:SimpleColorHistogram .
+
+
+###  http://www.example.org/lire#simpleExtractor
+lire:simpleExtractor rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf lire:localFeature ;
+                     rdfs:range lire:SimpleExtractor .
+
+
+###  http://www.example.org/lire#size
+lire:size rdf:type owl:ObjectProperty ;
+          rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#subImage
+lire:subImage rdf:type owl:ObjectProperty ;
+              rdfs:domain ma-ont:MediaResource ;
+              rdfs:range lire:SubImage .
+
+
+###  http://www.example.org/lire#subImgURL
+lire:subImgURL rdf:type owl:ObjectProperty ;
+               rdfs:domain lire:SubImage ;
+               rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#subImgX
+lire:subImgX rdf:type owl:ObjectProperty ;
+             rdfs:domain lire:SubImage ;
+             rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#subImgY
+lire:subImgY rdf:type owl:ObjectProperty ;
+             rdfs:domain lire:SubImage ;
+             rdfs:range xsd:Integer .
+
+
+###  http://www.example.org/lire#surfExtractor
+lire:surfExtractor rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf lire:localFeature ;
+                   rdfs:range lire:SurfExtractor .
+
+
+###  http://www.example.org/lire#tamura
+lire:tamura rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf lire:globalFeature ;
+            rdfs:range lire:Tamura .
+
+
+###  http://www.example.org/lire#thresholdEdgeHistogram
+lire:thresholdEdgeHistogram rdf:type owl:ObjectProperty ;
+                            rdfs:domain lire:EdgeHistogram ;
+                            rdfs:range xsd:Integer .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.example.org/lire#binCountsEdgeHistogram
+lire:binCountsEdgeHistogram rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#byteArrayRepresentation
+lire:byteArrayRepresentation rdf:type owl:DatatypeProperty ;
+                             rdfs:subPropertyOf lire:featureProperty ;
+                             rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#byteHistogramCEDD
+lire:byteHistogramCEDD rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf lire:featureProperty ;
+                       rdfs:domain lire:CEDD ;
+                       rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#cX
+lire:cX rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#cY
+lire:cY rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#cbCoeff
+lire:cbCoeff rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf lire:featureProperty ;
+             rdfs:domain lire:ColorLayout ;
+             rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#crCoeff
+lire:crCoeff rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf lire:featureProperty ;
+             rdfs:domain lire:ColorLayout ;
+             rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#featureName
+lire:featureName rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf lire:featureProperty ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#featureProperty
+lire:featureProperty rdf:type owl:DatatypeProperty ;
+                     rdfs:domain lire:Feature .
+
+
+###  http://www.example.org/lire#featureVector
+lire:featureVector rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf lire:featureProperty ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#haarTransformedHistogram
+lire:haarTransformedHistogram rdf:type owl:DatatypeProperty ;
+                              rdfs:subPropertyOf lire:featureProperty ;
+                              rdfs:domain lire:ScalableColor ;
+                              rdfs:range xsd:string .
+
+
+###  http://www.example.org/lire#numberOfBitplanesDiscarded
+lire:numberOfBitplanesDiscarded rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#numberOfCCoeff
+lire:numberOfCCoeff rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#numberOfCoefficients
+lire:numberOfCoefficients rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#numberOfYCoeff
+lire:numberOfYCoeff rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#size
+lire:size rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#subImgURL
+lire:subImgURL rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#subImgX
+lire:subImgX rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#subImgY
+lire:subImgY rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#thresholdEdgeHistogram
+lire:thresholdEdgeHistogram rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf lire:featureProperty .
+
+
+###  http://www.example.org/lire#yCoeff
+lire:yCoeff rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf lire:featureProperty ;
+            rdfs:domain lire:ColorLayout ;
+            rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://metadata.net/mpeg7/mpeg7.owl#Color
+mpeg7:Color rdf:type owl:Class .
+
+
+###  http://metadata.net/mpeg7/mpeg7.owl#EdgeHistogram
+mpeg7:EdgeHistogram rdf:type owl:Class ;
+                    owl:equivalentClass lire:EdgeHistogram .
+
+
+###  http://metadata.net/mpeg7/mpeg7.owl#ScalableColor
+mpeg7:ScalableColor rdf:type owl:Class ;
+                    owl:equivalentClass lire:ScalableColor .
+
+
+###  http://metadata.net/mpeg7/mpeg7.owl#Texture
+mpeg7:Texture rdf:type owl:Class .
+
+
+###  http://www.acemedia.org/ontologies/VDO#Feature
+vdo:Feature rdf:type owl:Class ;
+            owl:equivalentClass lire:Feature .
+
+
+###  http://www.example.org/lire#AutoColorCorrelogram
+lire:AutoColorCorrelogram rdf:type owl:Class ;
+                          rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#BinaryPatternsPyramid
+lire:BinaryPatternsPyramid rdf:type owl:Class ;
+                           rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#CEDD
+lire:CEDD rdf:type owl:Class ;
+          rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#ColorLayout
+lire:ColorLayout rdf:type owl:Class ;
+                 rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#EdgeHistogram
+lire:EdgeHistogram rdf:type owl:Class ;
+                   rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#FCTH
+lire:FCTH rdf:type owl:Class ;
+          rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#Feature
+lire:Feature rdf:type owl:Class .
+
+
+###  http://www.example.org/lire#FeatureProperty
+lire:FeatureProperty rdf:type owl:Class .
+
+
+###  http://www.example.org/lire#FuzzyColorHistogram
+lire:FuzzyColorHistogram rdf:type owl:Class ;
+                         rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#FuzzyOpponentHistogram
+lire:FuzzyOpponentHistogram rdf:type owl:Class ;
+                            rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#Gabor
+lire:Gabor rdf:type owl:Class ;
+           rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#GlobalFeature
+lire:GlobalFeature rdf:type owl:Class ;
+                   rdfs:subClassOf lire:Feature .
+
+
+###  http://www.example.org/lire#JCD
+lire:JCD rdf:type owl:Class ;
+         rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#JpegCoefficientHistogram
+lire:JpegCoefficientHistogram rdf:type owl:Class ;
+                              rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#LocalBinaryPatterns
+lire:LocalBinaryPatterns rdf:type owl:Class ;
+                         rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#LocalFeature
+lire:LocalFeature rdf:type owl:Class ;
+                  rdfs:subClassOf lire:Feature .
+
+
+###  http://www.example.org/lire#LuminanceLayout
+lire:LuminanceLayout rdf:type owl:Class ;
+                     rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#MPEG7features
+lire:MPEG7features rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Class ;
+                                         owl:unionOf ( mpeg7:Color
+                                                       mpeg7:Texture
+                                                     )
+                                       ] .
+
+
+###  http://www.example.org/lire#MediaResource
+lire:MediaResource rdf:type owl:Class .
+
+
+###  http://www.example.org/lire#OpponentHistogram
+lire:OpponentHistogram rdf:type owl:Class ;
+                       rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#PHOG
+lire:PHOG rdf:type owl:Class ;
+          rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#RelatedMediaResource
+lire:RelatedMediaResource rdf:type owl:Class .
+
+
+###  http://www.example.org/lire#RotationInvariantLocalBinaryPatterns
+lire:RotationInvariantLocalBinaryPatterns rdf:type owl:Class ;
+                                          rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#ScalableColor
+lire:ScalableColor rdf:type owl:Class ;
+                   rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#SelfSimilaritiesExtractor
+lire:SelfSimilaritiesExtractor rdf:type owl:Class ;
+                               rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#SelfSimilaritiesOrigExtractor
+lire:SelfSimilaritiesOrigExtractor rdf:type owl:Class ;
+                                   rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#ShapeContext
+lire:ShapeContext rdf:type owl:Class ;
+                  rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#ShapemeHistogram
+lire:ShapemeHistogram rdf:type owl:Class ;
+                      rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#SiftExtractor
+lire:SiftExtractor rdf:type owl:Class ;
+                   rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#SimpleColorHistogram
+lire:SimpleColorHistogram rdf:type owl:Class ;
+                          rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.example.org/lire#SimpleExtractor
+lire:SimpleExtractor rdf:type owl:Class ;
+                     rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#SubImage
+lire:SubImage rdf:type owl:Class .
+
+
+###  http://www.example.org/lire#SurfExtractor
+lire:SurfExtractor rdf:type owl:Class ;
+                   rdfs:subClassOf lire:LocalFeature .
+
+
+###  http://www.example.org/lire#Tamura
+lire:Tamura rdf:type owl:Class ;
+            rdfs:subClassOf lire:GlobalFeature .
+
+
+###  http://www.w3.org/2001/XMLSchema#Integer
+xsd:Integer rdf:type owl:Class .
+
+
+###  https://www.w3.org/ns/ma-ont.rdf#MediaResource
+ma-ont:MediaResource rdf:type owl:Class .
+
+
+###  https://www.w3.org/ns/ma-ont.rdf#RelatedMediaResource
+ma-ont:RelatedMediaResource rdf:type owl:Class .
+
+
+###  Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi
